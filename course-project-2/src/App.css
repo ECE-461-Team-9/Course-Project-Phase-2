@@ -1,3 +1,54 @@
+
+:root {
+  --primary-color: #ACBDBA;
+  --secondary-color: #CDDDDD;
+  --tertiary-color: #5C5552;
+  --complementary-color: #C98686;
+  --error: #FF715B;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.primary-bg {
+  background-color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-color);
+}
+
+.tertiary {
+  color: var(--tertiary-color);
+}
+
+.tertiary-bg {
+  background-color: var(--tertiary-color);
+}
+
+.complementary {
+  color: var(--complementary-color);
+}
+
+.complementary-bg {
+  background-color: var(--complementary-color);
+}
+
+.error {
+  color: var(--error);
+}
+
+.error-bg {
+  background-color: var(--error);
+}
+
+/* /////////// */
+
 .logo {
   height: 6em;
   padding: 1.5em;
