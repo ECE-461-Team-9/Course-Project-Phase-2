@@ -1,97 +1,93 @@
-Project README
+# Project README
 
-Overview
-
+## Overview
 This project implements a RESTful API adhering to the OpenAPI Specification. It provides endpoints for managing, rating, uploading, downloading, and searching for packages. Designed for extensibility and security, the API includes:
 
-Package ingestion from npm.
+- Package ingestion from npm.
+- Features like version pinning and package rating.
+- ADA-compliant web interface.
+- Deployment and CI/CD integrations with AWS and GitHub Actions.
+- Security case analysis using ThreatModeler.
 
-Features like version pinning and package rating.
+## Features
 
-ADA-compliant web interface.
+- **Upload & Update Packages:** Allows users to add new packages or update existing ones.
+- **Search & Directory:** Provides search capabilities and a package directory.
+- **Rate & Download:** Enables rating and downloading packages.
+- **Version Pinning:** Ensures version compatibility and stability.
 
-Deployment and CI/CD integrations with AWS and GitHub Actions.
+## Requirements
 
-Security case analysis using ThreatModeler.
+- TypeScript
+- AWS SDK
+- GitHub Actions for CI/CD
+- npm (for package ingestion)
 
-Features
+## Installation
 
-Upload & Update Packages: Allows users to add new packages or update existing ones.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/yourrepository.git
+   ```
 
-Search & Directory: Provides search capabilities and a package directory.
+2. Navigate to the project directory:
+   ```bash
+   cd yourrepository
+   ```
 
-Rate & Download: Enables rating and downloading packages.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Version Pinning: Ensures version compatibility and stability.
+4. Set up environment variables:
+   ```bash
+   export GITHUB_TOKEN="insert here"
+   export LOG_FILE="/tmp/checker.log"
+   export LOG_LEVEL=2
+   ```
 
-Requirements
+## Usage
 
-TypeScript
+1. Deploy the application via GitHub Actions.
+2. Access the API at:
+   ```
+   https://med4k766h1.execute-api.us-east-1.amazonaws.com/prod
+   ```
+3. Access the Web UI at:
+   ```
+   https://ece-461-team-9.github.io
+   ```
 
-AWS SDK
+## Deployment
 
-GitHub Actions for CI/CD
+1. Ensure GitHub Actions is configured for deployment.
+2. Push changes to the `main` branch to trigger a deployment pipeline.
+3. Monitor the deployment via AWS Management Console.
 
-npm (for package ingestion)
+## Development
 
-Installation
+- **Run Tests:**
+  ```bash
+  npm test
+  ```
 
-Clone the repository:
+- **Start Local Development:**
+  ```bash
+  npm run dev
+  ```
 
-git clone https://github.com/yourusername/yourrepository.git
+## Contributing
 
-Navigate to the project directory:
+1. Fork the repository.
+2. Create a feature branch.
+3. Submit a pull request.
 
-cd yourrepository
+## License
 
-Set up environment variables:
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-export GITHUB_TOKEN="insert_here"
-export LOG_FILE="/tmp/checker.log"
-export LOG_LEVEL=2
+---
 
-Usage
+For additional details, consult the OpenAPI specification file (`spec.yaml`).
 
-Deploy the application via GitHub Actions.
-
-Access the API at:
-
-https://med4k766h1.execute-api.us-east-1.amazonaws.com/prod
-
-Access the Web UI at:
-
-https://ece-461-team-9.github.io
-
-Deployment
-
-Ensure GitHub Actions is configured for deployment.
-
-Push changes to the main branch to trigger a deployment pipeline.
-
-Monitor the deployment via AWS Management Console.
-
-Individual Deployment
-
-Run zipper.sh in desired folder.
-
-Upload new zip folder to aws lambda function.
-
-Development
-
-Run Tests:
-
-npm test
-
-Start Local Development:
-
-npm run dev
-
-Contributing
-
-Fork the repository.
-
-Create a feature branch.
-
-Submit a pull request.
-
-For additional details, consult the OpenAPI specification file (spec.yaml).
