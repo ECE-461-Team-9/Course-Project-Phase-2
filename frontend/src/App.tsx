@@ -75,7 +75,7 @@ function AppContent() {
       <div ref={getNodeRef(location.pathname)}>
         <Routes location={location}>
           <Route path="/" element={<Home />} />
-          <Route path="/packages" element={<Packages />} />
+          <Route path="/packages" element={user ? <Packages /> : <RouteBlocker />} />
           <Route path="/packages/:id" element={user ? <PackageDetails /> : <RouteBlocker />} />
           <Route path="/packages/results/:id" element={user ? <PackageDetails isResult /> : <RouteBlocker />} />
           <Route path="/search/:query" element={user ? <SearchResults /> : <RouteBlocker />} />
